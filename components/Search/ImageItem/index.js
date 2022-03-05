@@ -17,9 +17,9 @@ export default function ImageItem({ result }) {
     }, []);
 
     const toggleFavorite = (e) => {
+        e.stopPropagation();
         setFavorite(!favorite);
         setFavoriteMovie(result.imdbID, !favorite);
-        e.preventDefault();
     }
 
     const onClickMovie = () => {
