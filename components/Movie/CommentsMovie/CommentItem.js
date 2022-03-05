@@ -1,6 +1,6 @@
 import { Box, Typography } from '@mui/material';
 
-import { formatDate } from '../../../lib/utils';
+import { formatDate } from '../../../lib/utils/utils';
 
 export default function CommentItem({ comment }) {
     return (
@@ -13,7 +13,7 @@ export default function CommentItem({ comment }) {
                 lineHeight: '27px',
                 color: '#7A8C99'
             }}>
-                {comment.name} - {formatDate(comment.date)}
+                {comment.name} - {formatDate(comment.date)} - ({comment.rate} estrellas)
             </Typography>
 
             <Typography sx={{

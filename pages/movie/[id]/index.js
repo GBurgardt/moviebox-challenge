@@ -1,5 +1,5 @@
 import { Container } from '@mui/material';
-import { getMovie } from '../../../lib/api';
+import { getMovie } from '../../../lib/api/api';
 import ImageMovie from '../../../components/Movie/ImageMovie';
 import DetailMovie from '../../../components/Movie/DetailsMovie';
 import CommentsMovie from '../../../components/Movie/CommentsMovie';
@@ -27,13 +27,10 @@ export default function MovieDetail({ movie }) {
 
 export const getServerSideProps = async (context) => {
     const { id } = context.query;
-
-    const movieResp = await getMovie(id)
+    const movieResp = await getMovie(id);
 
     return {
-        props: {
-            movie: movieResp.results
-        }
+        props: { movie: movieResp.results }
     }
 
 }

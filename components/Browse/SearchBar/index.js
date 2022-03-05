@@ -3,7 +3,7 @@ import TextField from '@mui/material/TextField';
 
 import SearchIcon from '@mui/icons-material/Search';
 import { useRouter } from 'next/router';
-import { debounce } from '../../../lib/utils';
+import { debounce } from '../../../lib/utils/utils';
 
 export default function SearchBar() {
     const router = useRouter();

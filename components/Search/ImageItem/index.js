@@ -2,7 +2,7 @@ import { ImageListItem } from '@mui/material';
 import React from 'react';
 import HeartIconFav from '../HeartIconFav';
 import { useRouter } from 'next/router'
-import { getFavoriteMovie, setFavoriteMovie } from '../../../lib/localStorage';
+import { getFavoriteMovie, setFavoriteMovie } from '../../../lib/localStorage/localStorage';
 
 export default function ImageItem({ result }) {
     const router = useRouter();

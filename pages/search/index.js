@@ -1,5 +1,5 @@
 import { Container, ImageList } from '@mui/material'
-import { getMovies } from '../../lib/api';
+import { getMovies } from '../../lib/api/api';
 import ImageItem from '../../components/Search/ImageItem';
 
 export default function Search({ response }) {

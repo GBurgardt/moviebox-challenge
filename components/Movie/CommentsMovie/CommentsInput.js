@@ -1,6 +1,6 @@
 import { Box, TextareaAutosize, Button, Input } from '@mui/material';
 import { useState } from 'react';
-import { getCommentsByMovie, setCommentsByMovie } from '../../../lib/localStorage';
+import { getCommentsByMovie, setCommentsByMovie } from '../../../lib/localStorage/localStorage';
 
 
 export default function CommentsInput({ onClickPostComment }) {

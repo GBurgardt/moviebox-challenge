@@ -1,6 +1,6 @@
 import { Typography, Box } from '@mui/material';
 import Image from 'next/image';
-import { minutesToHours, cutString } from '../../../lib/utils';
+import { minutesToHours, cutString } from '../../../lib/utils/utils';
 import imdbIcon from '../../../assets/icons/imdb-icon.png';
 
 export default function DetailsTitle({ movie }) {

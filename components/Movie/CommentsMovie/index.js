@@ -1,11 +1,12 @@
 import { Typography, Box, Snackbar, Alert } from '@mui/material';
 import { useEffect, useState } from 'react';
-import { getCommentsByMovie, setCommentsByMovie } from '../../../lib/localStorage';
+import { getCommentsByMovie, setCommentsByMovie } from '../../../lib/localStorage/localStorage';
 import CommentsInput from './CommentsInput';
 import CommentsList from './CommentsList';
 import CommentsRate from './CommentsRate';
 
 export default function CommentsMovie({ movie }) {
+    const [rate, setRate] = useState(0);
     const [comments, setComments] = useState([]);
     const [msgAlertSuccessOpen, setMsgAlertSuccessOpen] = useState(false);
     const [msgAlertErrorOpen, setMsgAlertErrorOpen] = useState(false);
@@ -16,10 +17,13 @@ export default function CommentsMovie({ movie }) {
     }, []);
 
     const onClickPostComment = (comment) => {
-        if (comment.message) {
+        if (comment.message && comment.name) {
+
+            const commentWithRate = { ...comment, rate };
+
             const comments = getCommentsByMovie(movie.imdbID);
 
-            const newComments = [...comments, comment];
+            const newComments = [...comments, commentWithRate];
 
             console.log("newComments")
             console.log(newComments)
@@ -57,7 +61,7 @@ export default function CommentsMovie({ movie }) {
                 </Typography>
             </Box>
 
-            <CommentsRate />
+            <CommentsRate rate={rate} updateRate={setRate} />
             <CommentsInput onClickPostComment={onClickPostComment} />
             <CommentsList comments={comments} />
 
