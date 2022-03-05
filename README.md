@@ -8,6 +8,10 @@ Se implementó una solución basada en Next.js con un enfoque en la simpleza y l
 - En la búsqueda se implemento un sistema de debounce a fin de evitar que se dispare una consulta a la api por cada input del usuario. El debounce implementado se podría reemplazar por alguna libreria (lodash o ramda) que esté mas testeada y que abarque mas casos de uso. El implementado es muy básico.
 - Los test unitarios se implementarón solo en /lib. Por priorizar tiempos se decidió no cubrir más coverage
 
+## Rutas
+/search?q=busqueda => Buscador de películas
+/movie/:movieId => Detalle de la pelicula
+
 ## Dependencias
 - mui/material: UI library
 - emotion: CSS-in-JS 

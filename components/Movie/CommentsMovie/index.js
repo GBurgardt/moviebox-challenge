@@ -79,7 +79,7 @@ export default function CommentsMovie({ movie }) {
                 autoHideDuration={6000}
                 onClose={() => setMsgAlertErrorOpen(false)}>
                 <Alert onClose={() => setMsgAlertErrorOpen(false)} severity="error" sx={{ width: '100%' }}>
-                Comentario vacío
+                Debe completar todos los campos
                 </Alert>
             </Snackbar>
 

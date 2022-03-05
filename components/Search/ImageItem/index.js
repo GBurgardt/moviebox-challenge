@@ -31,7 +31,8 @@ export default function ImageItem({ result }) {
             key={result.imdbID}
             sx={{
                 width: '87%',
-                margin: '10px'
+                margin: '10px',
+                cursor: 'pointer',
             }}
             onClick={onClickMovie}
         >
