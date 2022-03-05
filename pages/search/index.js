@@ -16,7 +16,7 @@ export default function Search({ response }) {
                 cols={4}
             >
                 {results.map(
-                    result => (<ImageItem result={result} />)
+                    (result) => (<ImageItem key={result.imdbID} result={result} />)
                 )}
             </ImageList>
         </Container>
